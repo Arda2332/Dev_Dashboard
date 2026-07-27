@@ -1,0 +1,117 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-07-27T06:19:37.942Z",
+  "snippets": [
+    {
+      "id": "snp-1",
+      "title": "Ollama Docker Container (GPU Accelerate)",
+      "command": "docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama",
+      "category": "Docker",
+      "description": "NVIDIA GPU destekli Ollama LLM sunucusunu başlatır.",
+      "shortcut": "Ctrl+1"
+    },
+    {
+      "id": "snp-2",
+      "title": "Termux JAX GPU Build & Setup",
+      "command": "pip install --upgrade pip && pip install \"jax[cuda12]\" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html",
+      "category": "Termux / JAX",
+      "description": "CUDA 12 destekli JAX kütüphanesini ve bağımlılıklarını derler.",
+      "shortcut": "Ctrl+2"
+    },
+    {
+      "id": "snp-3",
+      "title": "Magisk Boot Image Flash (Fastboot)",
+      "command": "fastboot flash boot magisk_patched_boot.img && fastboot reboot",
+      "category": "Magisk / ROM",
+      "description": "Yamalanmış boot.img dosyasını cihaza yazıp yeniden başlatır.",
+      "shortcut": "Ctrl+3"
+    },
+    {
+      "id": "snp-4",
+      "title": "N8N Self-Hosted Container",
+      "command": "docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n",
+      "category": "Docker",
+      "description": "Otomasyon aracı N8N'i port 5678 ile container olarak çalıştırır.",
+      "shortcut": "Ctrl+4"
+    },
+    {
+      "id": "snp-5",
+      "title": "Cloudflare Tunnel Quick Connect",
+      "command": "cloudflared tunnel --url http://localhost:8080",
+      "category": "System / Network",
+      "description": "Yerel 8080 portunu anında geçici public URL'e tüneller.",
+      "shortcut": "Ctrl+5"
+    },
+    {
+      "id": "snp-6",
+      "title": "ADB Wireless Pair & Connect",
+      "command": "adb pair 192.168.1.150:37123 && adb connect 192.168.1.150:5555",
+      "category": "Magisk / ROM",
+      "description": "Kablosuz ADB hata ayıklamayı eşleştirir ve bağlar.",
+      "shortcut": "Ctrl+6"
+    }
+  ],
+  "network": [
+    {
+      "id": "net-1",
+      "name": "Ollama LLM API",
+      "description": "Yerel Yapay Zeka Model Sunucusu",
+      "ipHost": "127.0.0.1",
+      "port": 11434,
+      "protocol": "http",
+      "category": "AI / LLM",
+      "icon": "brain"
+    },
+    {
+      "id": "net-2",
+      "name": "N8N Webhook & Workflow",
+      "description": "İş Akışı ve Otomasyon Paneli",
+      "ipHost": "127.0.0.1",
+      "port": 5678,
+      "protocol": "http",
+      "category": "Automation",
+      "icon": "workflow"
+    },
+    {
+      "id": "net-3",
+      "name": "Cloudflare Tunnel Status",
+      "description": "Yerel Servis Tünel Kontrolü",
+      "ipHost": "127.0.0.1",
+      "port": 2000,
+      "protocol": "http",
+      "category": "Tunnel",
+      "icon": "shield"
+    },
+    {
+      "id": "net-4",
+      "name": "Router Gateway",
+      "description": "Yerel Ağ Yönetim Arabirimi",
+      "ipHost": "192.168.1.1",
+      "port": 80,
+      "protocol": "http",
+      "category": "Router",
+      "icon": "router"
+    },
+    {
+      "id": "net-5",
+      "name": "Local PostgreSQL / Adminer",
+      "description": "Veritabanı Yönetim Paneli",
+      "ipHost": "127.0.0.1",
+      "port": 8080,
+      "protocol": "http",
+      "category": "Database",
+      "icon": "database"
+    }
+  ],
+  "focus": {
+    "workDuration": 25,
+    "breakDuration": 5,
+    "longBreakDuration": 15,
+    "ambientVolumes": {
+      "rain": 35,
+      "deepNoise": 25,
+      "binaural": 20,
+      "clicks": 15
+    }
+  }
+}

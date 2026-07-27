@@ -78,4 +78,3 @@ Dev_Dashboard/
 ## 👤 Geliştirici & Lisans
 
 - **Geliştirici**: Mehmet Arda Demir
-- **Lisans**: [MIT Lisansı](LICENSE) - Açık Kaynak ve Özgür Yazılım.
